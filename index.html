@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-Resizer</title>
+</head>
+
+<body>
+    <div style="display:flex ; justify-content: center; align-items: center;">
+        <form style="height: 400px; width: 400px; border: 3px solid red;margin-top: 200px; padding: 100px;">
+            Width: <input onchange="resize()" id="w" type="number"> <br>
+            <br>
+            Height: <input onchange="resize()" id="h" type="number">
+            <br>
+            <br>
+            <br>
+            <img id="img" width="300px" height="300px" src="./photo.png" alt="">
+        </form>
+    </div>
+    <script>
+        function resize() {
+            let W = document.getElementById("w").value
+            let H = document.getElementById("h").value
+
+            document.getElementById("img").style.width = W + "px";
+            document.getElementById("img").style.height = H + "px";
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
